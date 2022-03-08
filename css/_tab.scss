@@ -1,0 +1,29 @@
+.tab__container {
+  height: 100vh; //仮
+}
+.tab__label {
+  display: flex;
+  & li a {
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 1rem;
+    color: black;
+    border-radius: 10px 10px 0 0;
+    &.active {
+      background-color: rgb(231, 228, 228);
+    }
+    &:not(.active):hover {
+      opacity: 0.5;
+      transition: 0.4s;
+    }
+  }
+}
+:__content  {
+  display: none;
+  &.active {
+    background-color: rgb(231, 228, 228);
+    min-height: 150px;
+    padding: 1em;
+    display: block;
+  }
+}
