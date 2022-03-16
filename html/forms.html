@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form_test1">
+      <div id="yourName_value"></div>
+      <input id="yourName" type="text" name="yourName" placeholder="名前" /><br />
+      <!-- required 必須という意味 -->
+      <input type="email" placeholder="メールアドレス" required /><br />
+      <!--forでinput側のidを指定することで、labelの文字をクリックしても対応したidと同じ処理を行う事が出来る
+          今回でいえば、男性・女性をクリックすることでそれぞれのラジオボックスにチェックを入れられるようになる-->
+      <label for="gender_male">男性</label>
+      <input id="gender_male" type="radio" />
+      <label for="gender_female">女性</label>
+      <input id="gender_female" type="radio" />
+      <input type="submit" value="送信" /><br />
+      <select></select>
+      <textarea></textarea>
+      <button></button><br />
+      <!--ファイルアップロード用タグ　type="file"　とすることで専用のボタンが実装される セレクタの為に名前をつけておく-->
+      <input type="file" name="image_upload" /><br />
+      <!--imgタグで上記で選択した画像を表示させる。srcが空白だが、取り込んだ画像のアドレスが入るので空白でよし-->
+      <img src="" name="preview" class="width300" />
+    </form>
+    <form id="form_test2"><input id="form2_input" type="text" value="フォーム２" /><br /></form>
+    <script src="../js/forms.js"></script>
+  </body>
+</html>
